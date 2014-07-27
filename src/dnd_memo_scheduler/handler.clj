@@ -10,7 +10,8 @@
             [taoensso.timbre :as timbre]
             [taoensso.timbre.appenders.rotor :as rotor]
             [selmer.parser :as parser]
-            [environ.core :refer [env]]))
+            [environ.core :refer [env]])
+  (:gen-class))
 
 (defroutes app-routes
   (route/resources "/")
@@ -60,9 +61,9 @@
            ;; :json :json-kw :yaml :yaml-kw :edn :yaml-in-html
            :formats [:json-kw :edn]))
 
-(defn start-server
-  []
-  (run-jetty #'app {:port 8080 :join? false}))
+;(defn start-server
+;  []
+;  (run-jetty #'app {:port 8080 :join? false}))
 
 (defn -main [& args]
-  (start-server))
+  (run-jetty #'app {:port 8080 :join? false}))
