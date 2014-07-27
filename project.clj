@@ -45,7 +45,9 @@
    [org.clojure/clojure "1.6.0"]
    [ring-server "0.3.1"]
    [com.taoensso/tower "2.0.2"]
-   [lib-noir "0.8.4"]]
+   [lib-noir "0.8.4"]
+   [clj-rss "0.1.8"]]
   :repl-options
   {:init-ns dnd-memo-scheduler.repl}
+  :main dnd-memo-scheduler.handler
   :min-lein-version "2.0.0")

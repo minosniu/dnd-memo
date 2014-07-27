@@ -1,4 +1,6 @@
 (ns dnd-memo-scheduler.handler
+  (:use 
+    [ring.adapter.jetty :only [run-jetty]]) 
   (:require [compojure.core :refer [defroutes]]
             [dnd-memo-scheduler.routes.home :refer [home-routes]]
             [dnd-memo-scheduler.middleware :refer [load-middleware]]
@@ -57,3 +59,10 @@
            ;; available formats:
            ;; :json :json-kw :yaml :yaml-kw :edn :yaml-in-html
            :formats [:json-kw :edn]))
+
+(defn start-server
+  []
+  (run-jetty #'app {:port 8080 :join? false}))
+
+(defn -main [& args]
+  (start-server))
