@@ -71,6 +71,8 @@
    [ring-server "0.3.1"]
    [com.taoensso/tower "2.0.2"]
    [clj-rss "0.1.8"]
+   [clj-http "0.9.2"]
+   [org.clojure/data.json "0.2.5"]
    [com.novemberain/monger "1.7.0"]
    [lib-noir "0.8.4"]]
   :repl-options
