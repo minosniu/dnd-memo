@@ -1,12 +1,21 @@
+<div class="bs-callout bs-callout-danger">
+ <h3>MongoDB Configuration is Required</h3>
+ <p>Before continuing please follow the steps below to configure your MongoDB connection.</p>
+ <ol>
+   <li> Ensure that MongoDB is up and running.
+   <li> Add the connection parameters in the <code>dnd-memo.db.core</code> namespace.
+   <li> Restart the application.
+ </ol>
+</div>
 
 ### Managing Your Middleware
 
-Two middleware functions are provided by default in the `dnd-memo-scheduler.middleware` namespace.
+Two middleware functions are provided by default in the `dnd-memo.middleware` namespace.
 
 * `log-request` - logs all requests using the debug level
 * `template-error-page` - provides friendly formatting for Selmer errors in dev mode
 
-See the `:middleware` key of the `app` definition located in the `dnd-memo-scheduler.handler` namespace to manage the enabled middleware.
+See the `:middleware` key of the `app` definition located in the `dnd-memo.handler` namespace to manage the enabled middleware.
 
 ### Here are some links to get started
 

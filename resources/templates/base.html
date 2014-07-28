@@ -1,25 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Welcome to dnd-memo-scheduler</title>
+    <title>Welcome to dnd-memo</title>
   </head>
   <body>
-    <!-- navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="{{servlet-context}}/">dnd-memo-scheduler</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{servlet-context}}/">dnd-memo</a>
         </div>
-        <div class="navbar-collapse collapse ">
-          <ul class="nav navbar-nav">
-            <li class="{{home-selected}}"><a href="{{servlet-context}}/">Home</a></li>
-            <li class="{{about-selected}}"><a href="{{servlet-context}}/about">About</a></li>
-          </ul>
-        </div>
+        {% block menu %}
+          {% include "templates/menu.html" %}
+        {% endblock %}
       </div>
     </div>
-
     <div class="container">
       {% block content %}
       {% endblock %}
@@ -29,14 +28,14 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     {% style "/css/screen.css" %}
 
-    <script src="//code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
       var context = "{{servlet-context}}";
+      $(function() {
+        $("#{{selected-page}}").addClass("active");
+      });
     </script>
-    {% block page-scripts %}
-    {% endblock %}
-  </body>
+    </body>
 </html>
-

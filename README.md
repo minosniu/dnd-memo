@@ -1,4 +1,4 @@
-# dnd-memo-scheduler
+# dnd-memo
 
 FIXME
 

@@ -1,4 +1,4 @@
-(ns dnd-memo-scheduler.util
+(ns dnd-memo.util
   (:require [noir.io :as io]
             [markdown.core :as md]))
 

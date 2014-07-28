@@ -1,5 +1,5 @@
-(ns dnd-memo-scheduler.repl
-  (:use dnd-memo-scheduler.handler
+(ns dnd-memo.repl
+  (:use dnd-memo.handler
         ring.server.standalone
         [ring.middleware file-info file]))
 
