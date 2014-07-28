@@ -70,7 +70,7 @@
    [org.clojure/clojure "1.6.0"]
    [ring-server "0.3.1"]
    [com.taoensso/tower "2.0.2"]
-   [clj-rss "0.1.8"]]
+   [clj-rss "0.1.8"]
    [com.novemberain/monger "1.7.0"]
    [lib-noir "0.8.4"]]
   :repl-options
